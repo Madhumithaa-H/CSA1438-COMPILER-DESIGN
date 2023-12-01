@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+  int a, b, c, temp;
+  
+  printf("Enter the values of a and b: ");
+  scanf("%d %d", &a, &b);
+
+  // Compute a * (a + b) - (a - b) / b
+
+  // Step 1: a + b
+  temp = a + b;
+  printf("Temp1 = a + b: %d\n", temp);
+
+  // Step 2: a - b
+  c = a - b;
+  printf("c = a - b: %d\n", c);
+
+  // Step 3: (a - b) / b
+  temp = c / b;
+  printf("Temp2 = c / b: %d\n", temp);
+
+  // Step 4: a * (a + b)
+  temp = a * temp;
+  printf("Result = a * Temp2: %d\n", temp);
+
+  return 0;
+}
